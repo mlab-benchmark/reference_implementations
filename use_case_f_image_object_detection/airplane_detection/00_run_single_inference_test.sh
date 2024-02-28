@@ -1,0 +1,2 @@
+./04_submissions/05_image_aircraft_object_detection_zcu102_s1/airplane_detection/test_performance_yolov4 ./models/05_image_aircraft_object_detection_zcu102_s1/dpu_yolov4-384.xmodel ./04_submissions/05_image_aircraft_object_detection_zcu102_s1/airplane_detection/images_val.list -t1 -s30
+

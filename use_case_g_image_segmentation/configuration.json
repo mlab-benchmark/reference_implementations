@@ -1,0 +1,58 @@
+{
+	"task": {
+		"use_case": "Image Segmentation",
+		"dataset": "Airbus Ship Detection Dataset",
+		"target_metrics": [
+			"accuracy",
+			"throughput",
+			"energy",
+			"peak_power",
+			"idle_power"
+		],
+		"inference_scenario": "batch",
+		"submission_category": "all"
+	},
+	"system": {
+		"device": "Xilinx Zynq Ultrascale+ ZCU102",
+		"os": "Petalinux",
+		"framework": "Xilinx Vitis AI",
+		"compilation_info": {
+			"lib": "libvart-dpu-runner.so",
+		    "filename": "unet4_resnet50.xmodel",
+		    "kernel": [
+		        "subgraph_add_13\/add",
+		        "subgraph_add\/add",
+		        "subgraph_bn_data\/FusedBatchNormV3\/mul"
+		    ],
+		    "target": "DPUCZDX8G_ISA0_B4096_MAX_BG2"
+		},
+		"application_type": "Python",
+		"relevant_drivers": [
+			"hwmon"
+		],
+		"power_monitors": [
+			"vccpsintfp",
+			"vccpsintlp",
+			"vccpsaux",
+			"vccpspll",
+			"mgtravcc",
+			"mgtravtt",
+			"vcco_psddr_504",
+			"vccops",
+			"vccops3",
+			"vccpsddrpll",
+			"vccint",
+			"vccbram",
+			"vccaux",
+			"vcc1v2",
+			"vcc3v3",
+			"vadj_fmc",
+			"mgtavcc",
+			"mgtavtt"
+		]
+	},
+	"model": {
+		"name": "ResNet50",
+		"architecture_adapted": "False"
+	}
+}

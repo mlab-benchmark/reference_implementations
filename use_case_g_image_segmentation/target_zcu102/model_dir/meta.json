@@ -1,0 +1,10 @@
+{
+    "lib": "libvart-dpu-runner.so",
+    "filename": "unet4.xmodel",
+    "kernel": [
+        "subgraph_add_13\/add",
+        "subgraph_add\/add",
+        "subgraph_bn_data\/FusedBatchNormV3\/mul"
+    ],
+    "target": "DPUCZDX8G_ISA0_B4096_MAX_BG2"
+}

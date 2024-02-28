@@ -1,0 +1,7 @@
+{
+	"average_precision": 87.0,
+	"throughput": 10.4,
+	"energy": 0.536,
+	"peak_power": 11.7,
+	"idle_power": 8.3
+}
